@@ -10,7 +10,7 @@ function Work() {
         <div className="work-grid">
           <div className="work-item">
             <Link
-              to="/projects/Techcombank-Website-Redesign"
+              to="portfolio/projects/Techcombank-Website-Redesign"
               className="work-link"
             >
               <div
@@ -27,7 +27,10 @@ function Work() {
             </Link>
           </div>
           <div className="work-item">
-            <Link to="/projects/Udacity-Coffee-Shop" className="work-link">
+            <Link
+              to="portfolio/projects/Udacity-Coffee-Shop"
+              className="work-link"
+            >
               <div
                 className="work-thumbnail"
                 style={{
@@ -43,7 +46,7 @@ function Work() {
           </div>
           <div className="work-item">
             <Link
-              to="/projects/Getfromyt-YouTube-Converter"
+              to="portfolio/projects/Getfromyt-YouTube-Converter"
               className="work-link"
             >
               <div
@@ -61,7 +64,10 @@ function Work() {
           </div>
 
           <div className="work-item">
-            <Link to="/projects/Tesla-Dashboard-Redesign" className="work-link">
+            <Link
+              to="portfolio/projects/Tesla-Dashboard-Redesign"
+              className="work-link"
+            >
               <div
                 className="work-thumbnail"
                 style={{
