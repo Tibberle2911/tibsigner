@@ -97,7 +97,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/portfolio"
+            path="/"
             element={
               <>
                 <Helmet>
@@ -138,24 +138,24 @@ function App() {
             }
           />
           <Route
-            path="portfolio/projects/Getfromyt-YouTube-Converter"
+            path="/projects/Getfromyt-YouTube-Converter"
             element={<GetfromytProject />}
           />
           <Route
-            path="portfolio/projects/Techcombank-Website-Redesign"
+            path="/projects/Techcombank-Website-Redesign"
             element={<TechcombankProject />}
           />
           <Route
-            path="portfolio/projects/Tesla-Dashboard-Redesign"
+            path="/projects/Tesla-Dashboard-Redesign"
             element={<TeslaRedesignProject />}
           />
           <Route
-            path="portfolio/projects/Udacity-Coffee-Shop"
+            path="/projects/Udacity-Coffee-Shop"
             element={<UdacityCoffeeShopProject />}
           />
 
           {/* Catch-all route */}
-          <Route path="*" element={<Navigate to="/portfolio" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </ScrollHandler>
     </div>
