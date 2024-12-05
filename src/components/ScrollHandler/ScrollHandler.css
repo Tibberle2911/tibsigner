@@ -2,10 +2,12 @@
 body.default-scroll {
   overflow-y: auto;
   scroll-behavior: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom scrolling for other pages */
 body.custom-scroll {
   overflow-y: hidden;
   scroll-behavior: smooth;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

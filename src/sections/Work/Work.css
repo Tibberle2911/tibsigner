@@ -77,6 +77,12 @@
   }
 }
 
+@media (max-width: 500px) {
+  .work-thumbnail {
+    height: 13vh;
+  }
+}
+
 /* Hover Effect: Zoom Image */
 .work-item:hover .work-thumbnail {
   filter: grayscale(0);
