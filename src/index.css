@@ -47,7 +47,7 @@ h2 {
 
 @media (max-width: 800px) {
   h2 {
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
   }
 }
 
@@ -88,7 +88,6 @@ section {
   color: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   transition: var(--transition);

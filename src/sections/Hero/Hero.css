@@ -1,5 +1,22 @@
 @import url("../../root.css");
 
+.hero-section {
+  position: relative;
+  top: 25vh;
+}
+
+@media (max-height: 850px) {
+  .hero-section {
+    top: 18vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-section {
+    top: 100px;
+  }
+}
+
 /* Author Image Container */
 .author-image-container {
   border-radius: var(--border-radius-circle);
@@ -24,7 +41,7 @@
 
 @media (max-width: 800px) {
   .scroll-message-container {
-    bottom: 80px;
+    bottom: 100px;
   }
 }
 

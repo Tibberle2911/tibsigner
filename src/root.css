@@ -1,8 +1,18 @@
+@font-face {
+  font-family: "Moon Walker Personal Use";
+  src: url("./Moon-Walker-Personal-Use/MoonWalkerPersonalUse.woff2")
+      format("woff2"),
+    url("Moon-Walker-Personal-Use/MoonWalkerPersonalUse.woff") format("woff"),
+    url("Moon-Walker-Personal-Use/MoonWalkerPersonalUse.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* Fonts */
   --font-primary: "Hind", sans-serif;
   --font-family-heading: "Oswald", sans-serif;
-  --logo-font: "Moon Walker Personal Use";
+  --logo-font: "Moon Walker Personal Use", "Courier New", monospace;
 
   /* Common Sizes */
   --font-size-small: 14px;

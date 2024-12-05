@@ -7,12 +7,22 @@ const ScrollHandler = ({ children }) => {
 
   useEffect(() => {
     const isProjectPage = location.pathname.includes("/projects/");
-
-    // Update the body class based on the current route
     document.body.classList.toggle("default-scroll", isProjectPage);
     document.body.classList.toggle("custom-scroll", !isProjectPage);
 
-    if (isProjectPage) return; // Default browser scrolling on the project page
+    if (isProjectPage) return;
+
+    let lastTouchY = 0;
+    let isThrottled = false;
+
+    const throttle = (callback, delay) => {
+      if (isThrottled) return;
+      isThrottled = true;
+      setTimeout(() => {
+        callback();
+        isThrottled = false;
+      }, delay);
+    };
 
     const scrollToNextSection = () => {
       const nextSection = document.getElementById("main");
@@ -28,17 +38,49 @@ const ScrollHandler = ({ children }) => {
       }
     };
 
-    const handleScrollEvent = (e) => {
-      if (e.deltaY > 0) {
+    const handleWheelEvent = (e) => {
+      throttle(() => {
+        if (e.deltaY > 0) {
+          scrollToNextSection();
+        } else {
+          scrollToHeroSection();
+        }
+      }, 0);
+    };
+
+    const handleTouchStart = (e) => {
+      lastTouchY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      throttle(() => {
+        const currentY = e.touches[0].clientY;
+        if (lastTouchY > currentY + 5) {
+          scrollToNextSection();
+        } else if (lastTouchY < currentY - 5) {
+          scrollToHeroSection();
+        }
+      }, 0);
+    };
+
+    const handleKeydown = (e) => {
+      if (e.key === "ArrowDown" || e.key === "PageDown") {
         scrollToNextSection();
-      } else {
+      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
         scrollToHeroSection();
       }
     };
 
-    window.addEventListener("wheel", handleScrollEvent);
+    window.addEventListener("wheel", handleWheelEvent, { passive: true });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("keydown", handleKeydown);
+
     return () => {
-      window.removeEventListener("wheel", handleScrollEvent);
+      window.removeEventListener("wheel", handleWheelEvent);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("keydown", handleKeydown);
     };
   }, [location]);
 

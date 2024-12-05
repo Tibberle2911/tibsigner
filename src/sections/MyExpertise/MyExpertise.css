@@ -1,19 +1,35 @@
 @import url("../../root.css");
 
 /* Expertise Section */
+.expertise-section {
+  position: relative;
+  top: 20vh;
+}
+
+@media (max-width: 800px) {
+  .expertise-section {
+    top: 15vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .expertise-section {
+    top: 9vh;
+  }
+}
 
 /* Container for the boxes */
 .expertise-container {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-small);
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   .expertise-container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--spacing-medium);
+    flex-direction: column;
+    gap: var(--spacing-small);
   }
 }
 

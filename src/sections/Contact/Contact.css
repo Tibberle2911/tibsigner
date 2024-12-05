@@ -1,6 +1,11 @@
 @import url("../../root.css");
 
 /* Contact Section */
+.contact-section {
+  position: relative;
+  top: 20vh;
+}
+
 .contact-section p {
   font-size: var(--font-size-paragraph);
   margin-bottom: var(--spacing-medium);

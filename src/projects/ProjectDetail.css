@@ -4,6 +4,7 @@
 .project-page {
   margin: var(--spacing-xlarge) auto 0 auto;
   max-width: 1344px;
+  width: auto;
   min-height: 100vh;
   padding: 0 var(--spacing-large);
   margin-bottom: var(--spacing-large);
@@ -178,8 +179,8 @@
     gap: var(--spacing-xsmall);
   }
   .image-preview {
-    width: 60px !important;
-    height: 45px !important;
+    width: 50px !important;
+    height: 35px !important;
   }
   .image-preview.active {
     transform: scale(1.02);
