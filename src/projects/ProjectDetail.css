@@ -8,6 +8,7 @@
   min-height: 100vh;
   padding: 0 var(--spacing-large);
   margin-bottom: var(--spacing-large);
+  background: transparent !important;
 }
 
 @media (max-width: 800px) {
