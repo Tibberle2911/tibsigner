@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 800px) {
+  .hero-section {
+    top: 15vh;
+  }
+}
+
 /* Author Image Container */
 .author-image-container {
   border-radius: var(--border-radius-circle);
