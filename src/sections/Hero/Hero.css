@@ -11,12 +11,6 @@
   }
 }
 
-@media (max-width: 800px) {
-  .hero-section {
-    top: 100px;
-  }
-}
-
 /* Author Image Container */
 .author-image-container {
   border-radius: var(--border-radius-circle);
@@ -37,6 +31,12 @@
   bottom: 48px;
   z-index: 10;
   animation: fadeInUp 1.5s ease-out infinite;
+}
+
+@media (max-height: 850px) {
+  .scroll-message-container {
+    bottom: 24px;
+  }
 }
 
 @media (max-width: 800px) {
