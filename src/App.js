@@ -13,7 +13,7 @@ import WorkSection from "./sections/Work/Work";
 import ContactSection from "./sections/Contact/Contact";
 import TechcombankProject from "./projects/Techcombank-Website-Redesign";
 import GetfromytProject from "./projects/Getfromyt-YouTube-Converter";
-import TeslaRedesignProject from "./projects/Tesla-Dashboard-Redesign";
+import WheretoSpotProject from "./projects/WheretoSpot";
 import UdacityCoffeeShopProject from "./projects/Udacity-Coffee-Shop";
 import Navbar from "./components/Navbar/Navbar";
 import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
@@ -146,8 +146,8 @@ function App() {
             element={<TechcombankProject />}
           />
           <Route
-            path="/projects/Tesla-Dashboard-Redesign"
-            element={<TeslaRedesignProject />}
+            path="/projects/WheretoSpot"
+            element={<WheretoSpotProject />}
           />
           <Route
             path="/projects/Udacity-Coffee-Shop"

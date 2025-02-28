@@ -63,19 +63,18 @@ function Work() {
 
             <div className="work-item">
               <Link
-                to="/projects/Tesla-Dashboard-Redesign"
+                to="/projects/WheretoSpot"
                 className="work-link"
               >
                 <div
                   className="work-thumbnail"
                   style={{
-                    backgroundImage: "url('Tesla-logo.png')",
+                    backgroundImage: "url('WheretoSpot.jpg')",
                   }}
                 ></div>
-                <h3>Tesla | Dashboard Redesign</h3>
+                <h3>Where To Spot | Internship</h3>
                 <p>
-                  Redesign the dashboard of Tesla with an additional feature to
-                  manage Tesla cars from a far distance.
+                  This Platform created for the people who seeks places where they really find what they seeks.
                 </p>
               </Link>
             </div>
